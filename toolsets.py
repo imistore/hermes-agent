@@ -65,8 +65,13 @@ _HERMES_CORE_TOOLS = [
     # zero schema footprint. Gated via check_fn in tools/kanban_tools.py.
     "kanban_show", "kanban_complete", "kanban_block", "kanban_heartbeat",
     "kanban_comment", "kanban_create", "kanban_link",
-    # u8openapi
-    "u8_openapi_customer_get","u8_openapi_customer_add","u8_openapi_accept_add","u8_openapi_accept_get_tool","u8_openapi_accept_list_get_tool","u8_openapi_accept_verify_tool","u8_openapi_accept_unverify",
+    # u8_ba
+    "u8_customer_get","u8_customer_add",
+    # u8_ar
+    "u8_pay_add_tool","u8_pay_get_tool","u8_pay_list_get_tool","u8_pay_verify_tool","u8_pay_unverify_tool",
+    "u8_accept_add","u8_accept_get_tool","u8_accept_list_get_tool","u8_accept_verify_tool","u8_accept_unverify",
+    "u8_oughtpay_add_tool","u8_oughtpay_get_tool","u8_oughtpay_list_get_tool","u8_oughtpay_verify_tool","u8_oughtpay_unverify_tool",
+    "u8_oughtreceive_add_tool","u8_oughtreceive_get_tool","u8_oughtreceive_list_get_tool","u8_oughtreceive_verify_tool","u8_oughtreceive_unverify_tool"
 ]
 
 
@@ -508,9 +513,13 @@ TOOLSETS = {
         "includes": ["hermes-telegram", "hermes-discord", "hermes-whatsapp", "hermes-slack", "hermes-signal", "hermes-bluebubbles", "hermes-homeassistant", "hermes-email", "hermes-sms", "hermes-mattermost", "hermes-matrix", "hermes-dingtalk", "hermes-feishu", "hermes-wecom", "hermes-wecom-callback", "hermes-weixin", "hermes-qqbot", "hermes-webhook", "hermes-yuanbao"]
     },
     
-    "u8_openapi": {
+    "u8": {
         "description": "u8erp openapi toolset",
-        "tools": ["u8_openapi_customer_get","u8_openapi_customer_add","u8_openapi_accept_add","u8_openapi_accept_get_tool","u8_openapi_accept_list_get_tool","u8_openapi_accept_verify_tool","u8_openapi_accept_unverify"],
+        "tools": ["u8_customer_get","u8_customer_add",
+                  "u8_pay_add_tool","u8_pay_get_tool","u8_pay_list_get_tool","u8_pay_verify_tool","u8_pay_unverify_tool",
+                  "u8_accept_add","u8_accept_get_tool","u8_accept_list_get_tool","u8_accept_verify_tool","u8_accept_unverify",
+                  "u8_oughtpay_add_tool","u8_oughtpay_get_tool","u8_oughtpay_list_get_tool","u8_oughtpay_verify_tool","u8_oughtpay_unverify_tool",
+                  "u8_oughtreceive_add_tool","u8_oughtreceive_get_tool","u8_oughtreceive_list_get_tool","u8_oughtreceive_verify_tool","u8_oughtreceive_unverify_tool"],
         "includes": []
     }
 }
